@@ -12,16 +12,13 @@ import java.util.Date;
  *
  * @author Gargel
  */
-public class Arquivo implements Serializable{
+public class ArquivoServer implements Serializable{
     private static final long serialVersionUID = 1L;
     
     private String nome;
-    private byte[]  conteudo;
-    private transient long tamanhoKB;
-    private transient Date dataHoraUpload;
-    private transient String ipDestino;
-    private transient String portaDestino;
+    private byte[] conteudo;
     private String diretorioDestino;
+    private Date dataHoraUpload;
 
     public String getNome() {
         return nome;
@@ -39,12 +36,12 @@ public class Arquivo implements Serializable{
         this.conteudo = conteudo;
     }
 
-    public long getTamanhoKB() {
-        return tamanhoKB;
+    public String getDiretorioDestino() {
+        return diretorioDestino;
     }
 
-    public void setTamanhoKB(long tamanhoKB) {
-        this.tamanhoKB = tamanhoKB;
+    public void setDiretorioDestino(String diretorioDestino) {
+        this.diretorioDestino = diretorioDestino;
     }
 
     public Date getDataHoraUpload() {
@@ -53,30 +50,6 @@ public class Arquivo implements Serializable{
 
     public void setDataHoraUpload(Date dataHoraUpload) {
         this.dataHoraUpload = dataHoraUpload;
-    }
-
-    public String getIpDestino() {
-        return ipDestino;
-    }
-
-    public void setIpDestino(String ipDestino) {
-        this.ipDestino = ipDestino;
-    }
-
-    public String getPortaDestino() {
-        return portaDestino;
-    }
-
-    public void setPortaDestino(String portaDestino) {
-        this.portaDestino = portaDestino;
-    }
-
-    public String getDiretorioDestino() {
-        return diretorioDestino;
-    }
-
-    public void setDiretorioDestino(String diretorioDestino) {
-        this.diretorioDestino = diretorioDestino;
     }
     
     
